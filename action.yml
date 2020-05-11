@@ -1,0 +1,8 @@
+name: 'WeThinkCode_ Send Twist Webooks'
+description: 'Call Twist Webhooks'
+branding:
+    icon: 'wtc-logo.svg'
+    color: 'blue'
+runs:
+    using: 'node12'
+    main: 'lib/main.js'
