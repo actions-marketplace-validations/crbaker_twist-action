@@ -11,12 +11,12 @@ jobs:
     steps:
     - uses: actions/checkout@master
     - name: Twist
-      uses: crbaker/actions-twister@v1.2
+      uses: crbaker/actions-twister@v1.3
       with:
         install-id: 112234
         install-token: 123434_d3232132131
-        title: "Some\ Title"
-        content: "Some\ Content"
+        title: "Some Title"
+        content: "Some Content"
 ```
 
 ### Docker
