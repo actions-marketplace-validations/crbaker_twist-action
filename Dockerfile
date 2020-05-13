@@ -11,6 +11,6 @@ LABEL "maintainer"="Chris Baker <crbaker@gmail.com>"
 
 RUN pip install requests
 
-ADD *.py /
+ADD *.py .
 
 ENTRYPOINT ["python", "./entrypoint.py"]
