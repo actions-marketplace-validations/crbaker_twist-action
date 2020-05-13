@@ -9,8 +9,9 @@ LABEL "repository"="git@github.com:crbaker/actions-twister.git"
 LABEL "homepage"="https://github.com/crbaker/actions-twister"
 LABEL "maintainer"="Chris Baker <crbaker@gmail.com>"
 
-RUN pip install requests
-
 ADD *.py .
 
-ENTRYPOINT ["python", "./entrypoint.py"]
+RUN pip install requests
+RUN chmod +x ./entrypoint.py
+
+ENTRYPOINT ["./entrypoint.py"]
