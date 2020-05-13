@@ -11,7 +11,7 @@ jobs:
     steps:
     - uses: actions/checkout@master
     - name: Twist
-      uses: crbaker/actions-twister@v1.3
+      uses: crbaker/actions-twister@v1.4
       with:
         install-id: 112234
         install-token: 123434_d3232132131
@@ -24,10 +24,8 @@ jobs:
 docker run --rm $(docker build -q .) "112234" "123434_d3232132131" "Some Title" "Some Content"
 ```
 
-
 ## Author
 [Chris Baker](https://github.com/crbaker)
-
 
 ## License
 [MIT](https://wei.mit-license.org)
