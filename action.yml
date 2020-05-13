@@ -1,15 +1,9 @@
 name: 'WeThinkCode_ Send Twist Webooks'
 description: 'Call Twist Webhooks'
 inputs:
-    install-id: 
-      description: 'The Twist Webhooks Install ID'
+    twist-url: 
+      description: 'The Twist Webhooks URL to post to'
       required: true
-    install-token:
-        description: 'The Twist Webhooks Install Token'
-        required: true
-    title:
-        description: 'The title of the notification'
-        required: true
     content:
         description: 'The content of the notification'
         required: true
@@ -20,7 +14,5 @@ runs:
   using: 'docker'
   image: 'Dockerfile'
   args:
-    - ${{ inputs.install-id }}  
-    - ${{ inputs.install-token }}  
-    - ${{ inputs.title }}  
-    - ${{ inputs.content }}  
+    - ${{ inputs.twist-url }}
+    - ${{ inputs.content }}

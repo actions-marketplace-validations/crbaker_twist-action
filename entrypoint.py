@@ -2,12 +2,7 @@
 import sys
 import requests
 
-install_id = sys.argv[1]
-install_token = sys.argv[2]
-title = sys.argv[3]
-content = sys.argv[4]
+twist_url = sys.argv[1]
+content = sys.argv[2]
 
-url = f"https://hooks.twist.com/api/v3/integration_incoming/post_data?install_id={install_id}&install_token={install_token}"
-payload = {"title":title, "content":content}
-
-r = requests.post(url, json = payload)
+requests.post(twist_url, json = {"content": content})

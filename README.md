@@ -10,18 +10,17 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@master
-    - name: Twist
-      uses: crbaker/actions-twister@v1.4
+
+    - name: Twist Notification
+      uses: crbaker/actions-twister@v1.8
       with:
-        install-id: 112234
-        install-token: 123434_d3232132131
-        title: "Some Title"
+        twist-url: 112234
         content: "Some Content"
 ```
 
 ### Docker
 ```
-docker run --rm $(docker build -q .) "112234" "123434_d3232132131" "Some Title" "Some Content"
+docker run --rm $(docker build -q .) "https://twist.com/api/v3/integration_incoming/post_data?install_id=12345&install_token=12345_...." "Some Content"
 ```
 
 ## Author
